@@ -26,9 +26,10 @@ func main() {
 	// runtime error: index out of range [99] with length 4
 	// fmt.Printf("s3[99]: %d", s3[99])
 
-	// SubSlice()
+	//println("test SubSlice")
+	//SubSlice()
 
-	//shareArr()
+	ShareSlice()
 }
 
 func SubSlice() {

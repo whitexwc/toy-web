@@ -1,5 +1,11 @@
 package main
 
+import "unsafe"
+
 func main() {
-	var a byte = 13
+	var b byte = 11
+	var r rune = 22
+
+	println(unsafe.Sizeof(b))
+	println(unsafe.Sizeof(r))
 }

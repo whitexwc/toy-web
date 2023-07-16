@@ -23,11 +23,28 @@ func main() {
 }
 
 func Add(s []int, index int, value int) []int {
-	//TODO
+	length := len(s)
+	if index >= length {
+		s = append(s, value)
+	} else if index < length && index >= 0 {
+		s = append(s, s[length-1])
+		i := length - 1
+		for ; i > index; i -= 1 {
+			s[i] = s[i-1]
+		}
+		s[i] = value
+	}
 	return s
 }
 
 func Delete(s []int, index int) []int {
-	// TODO
+	length := len(s)
+	if index < 0 || index >= length {
+		return s
+	}
+	for i := index; i < length-1; i += 1 {
+		s[i] = s[i+1]
+	}
+	s = s[:length-1]
 	return s
 }
